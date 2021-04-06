@@ -1,0 +1,27 @@
+<br>
+
+<div class="container">
+    <div class="col-md-12">
+        <mat-accordion class="example-headers-align">
+            <mat-expansion-panel *ngFor="let p of purchasedlist">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <h2>{{p.purchaseId}}</h2>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <h2 class="text-info">{{p.purchaseTitle}}</h2>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <app-purchase-order [PurchaseItem]='p'></app-purchase-order>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </div>
+    <div style="height: 600px;"></div>
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3" style="color: grey;">
+            <h5>Explanation :</h5>
+            This Demo is implemented with the help of Structure directive and displaying the data of purchaser and their items purchased.
+        </div>
+    </footer>
+</div>
